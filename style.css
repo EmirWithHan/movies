@@ -1,0 +1,160 @@
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.movie-card {
+  width: calc(10% - 20px);
+  padding: 0%;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: black;
+  color: aqua;
+}
+
+@media screen and (max-width: 1023px) {
+  .movie-card {
+    width: calc(14.2857% - 20px);
+    margin-bottom: 10px;
+  }
+
+  .movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .movie-card {
+    width: calc(25% - 20px);
+    margin-bottom: 5px;
+  }
+
+  .movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+
+.my-element {
+  text-align: center;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.popup-header {
+  /* display: flex; */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.popup-header img {
+  max-width: 150px;
+  max-height: 200px;
+  margin-right: 20px;
+  padding-bottom: 15px;
+}
+
+.movie-details {
+  flex: 1;
+}
+
+.movie-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.movie-details p {
+  font-size: 16px;
+  margin: 0;
+  padding-right: 5px;
+  word-wrap: break-word; /* Sığmayan yazılar alt satıra geçecek */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar {
+  /* padding: 10px; */
+  margin-bottom: 10px;
+}
+
+.navbar-brand {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn.active {
+  background-color: #FFD700;
+  color: #fff;
+}
+
+.btn.active:focus,
+.btn.active:hover {
+  background-color: #d2b302;
+  color: #fff;
+}
+
+.btn:not(.active) {
+  background-color: #808080;
+  color: #fff;
+}
+
+.btn:not(.active):focus,
+.btn:not(.active):hover {
+  background-color: #a9a9a9;
+  color: #fff;
+}
